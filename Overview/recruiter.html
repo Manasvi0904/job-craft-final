@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiter Dashboard - Job Craft</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #002147;
+      color: white;
+      padding: 15px 40px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 40px;
+      background: #f4f4f4;
+    }
+
+    .features-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    .feature-card button {
+      margin-top: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .feature-card button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Resume Viewer */
+    .resume-viewer {
+      display: none;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .resume-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .resume-card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Job Craft</div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+<br>
+<br>
+  <section class="hero">
+    <h1>Welcome, Recruiter!</h1>
+    <p>Discover top talent and build your dream team with Us.</p>
+  </section>
+
+  <section class="features-grid">
+    <div class="feature-card">
+      <h2>Expand Your Team</h2>
+      <p>Post vacancies and attract qualified professionals.</p>
+      <button>Post Job</button>
+    </div>
+    <div class="feature-card">
+      <h2>Explore Resumes</h2>
+      <p>Search and review resumes from top candidates.</p>
+      <button onclick="viewResumes()">View Resumes</button>
+    </div>
+  </section>
+
+  <section id="resume-viewer" class="resume-viewer">
+    <h2>Resumes</h2>
+    <div class="resume-list"></div>
+  </section>
+
+  <script>
+    const resumes = [
+      { name: "John Doe", skills: "JavaScript, React, Node.js", location: "New York" },
+      { name: "Jane Smith", skills: "Python, Django, SQL", location: "San Francisco" },
+      { name: "Alice Johnson", skills: "Java, Spring Boot, AWS", location: "Chicago" }
+    ];
+
+    function viewResumes() {
+      const resumeViewer = document.getElementById("resume-viewer");
+      const resumeList = document.querySelector(".resume-list");
+      resumeList.innerHTML = "";
+
+      resumes.forEach(resume => {
+        const resumeCard = document.createElement("div");
+        resumeCard.classList.add("resume-card");
+        resumeCard.innerHTML = `
+          <h3>${resume.name}</h3>
+          <p><strong>Skills:</strong> ${resume.skills}</p>
+          <p><strong>Location:</strong> ${resume.location}</p>
+          <button onclick="downloadResume('${resume.name}')">Download</button>
+        `;
+        resumeList.appendChild(resumeCard);
+      });
+
+      resumeViewer.style.display = "block";
+    }
+
+    function downloadResume(name) {
+      alert(Downloading resume for ${name}...);
+    }
+  </script>
+
+</body>
+</html>

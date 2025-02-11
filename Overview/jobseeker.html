@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Seeker - Job Craft</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+    }
+
+    /* Header */
+    header {
+      background-color: #002855;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+
+    /* Upper Heading */
+    .upper-heading {
+      text-align: center;
+      background-color: #f1f1f1;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Main Content Section */
+    .main-content {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .main-content h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #011e55;
+    }
+
+    .main-content p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 320px;
+    }
+
+    .feature-card .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .feature-card h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .feature-card button {
+      background-color: #011e55;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .feature-card button:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Job Craft</div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Upper Heading -->
+  <div class="upper-heading">
+    Unlock new opportunities and grow professionally!
+  </div>
+
+  <!-- Main Content Section -->
+  <section class="main-content">
+    <h2>Your Gateway to New Career Opportunities</h2>
+    <p>Search for jobs, manage your profile, and apply with confidence. Our platform helps job seekers connect with top employers.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-grid">
+    <!-- Explore Jobs -->
+    <div class="feature-card">
+      <div class="icon">🔍</div>
+      <h2>Explore Jobs</h2>
+      <form>
+        <input type="text" placeholder="Enter key skills">
+        <input type="text" placeholder="Enter preferred location">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- Profile Management -->
+    <div class="feature-card">
+      <div class="icon">👤</div>
+      <h2>Profile Management</h2>
+      <p>Manage your profile and showcase your skills!</p>
+      <button>Manage Profile</button>
+    </div>
+
+    <!-- Job Details -->
+    <div class="feature-card">
+      <div class="icon">📄</div>
+      <h2>Job Details</h2>
+      <p>Review job postings and apply with confidence.</p>
+      <button>View Jobs</button>
+    </div>
+  </section>
+
+</body>
+</html>
